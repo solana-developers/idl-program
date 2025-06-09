@@ -1,3 +1,5 @@
+Deprecated in favor of a pinocchio rewrite by Anza: https://github.com/solana-program/program-metadata
+
 # Program Metadata
 
 A program to store metadata and IDL for Solana programs.
