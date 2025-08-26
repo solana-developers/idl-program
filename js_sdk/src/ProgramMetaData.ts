@@ -732,17 +732,12 @@ async function fetchIDL(
   const dataType = decoded.dataType;
   const dataLength = decoded.dataLen;
   const format = decoded.format;
-  console.log("decoded", decoded);
   const compressedData = accountInfo.data.slice(
     METADATA_OFFSET,
     METADATA_OFFSET + dataLength
   );
   const decompressedData = inflate(compressedData);
   const content = new TextDecoder("utf-8").decode(decompressedData);
-
-  console.log("Data type", dataType);
-  console.log("dataLength", dataLength);
-  console.log("format", format);
 
   if ("url" in format) {
     // Handle URL type
